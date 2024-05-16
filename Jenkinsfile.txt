@@ -1,0 +1,20 @@
+pipeline {
+  agent any
+  stages {
+    stage('Checkout Scm') {
+      steps {
+        git(credentialsId: '02054cc5-4830-4d4f-8564-a122943ed879', url: 'git@github.com:Sachitha-M/csoft-test.git')
+      }
+    }
+
+    stage('Batch script 0') {
+      steps {
+        bat '''java -version
+dir
+javac HelloWorld.java
+java HelloWorld'''
+      }
+    }
+
+  }
+}
