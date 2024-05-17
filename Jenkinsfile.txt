@@ -7,12 +7,10 @@ pipeline {
       }
     }
 
-    stage('Batch script 0') {
+    stage('First Pipeline') {
       steps {
-        bat '''java -version
-dir
-javac HelloWorld.java
-java HelloWorld'''
+        echo 'Hello World '
+       
       }
     }
 
