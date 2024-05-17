@@ -1,9 +1,5 @@
 pipeline {
   agent any
-
-  options {
-     retry(5)
-   }
   stages {
     stage('Checkout Scm') {
       steps {
