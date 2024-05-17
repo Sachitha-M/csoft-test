@@ -3,8 +3,7 @@ pipeline {
   stages {
     stage('Checkout Scm') {
       steps {
-          git branch: 'main' ,
-        git(credentialsId: '02054cc5-4830-4d4f-8564-a122943ed879', url: 'git@github.com:Sachitha-M/csoft-test.git')
+        git(credentialsId: '02054cc5-4830-4d4f-8564-a122943ed879', url: 'git@github.com:Sachitha-M/csoft-test.git',branch: 'main')
       
       }
     }
